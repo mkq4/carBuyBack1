@@ -1,0 +1,194 @@
+@import 'variables';
+
+.container {
+    max-width: 1200px;
+    padding: 0 25px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+// HEADER 
+
+.header {
+    h1 {
+        font-size: 50px;
+    }
+    &__inner {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        &-left {
+            display: flex;
+            align-items: end;
+
+            &-text  {
+                a {
+                    transition: .5s;
+                    display: flex;
+                    margin-top: 10px;
+                    color: $blue-color;
+                    &:hover {
+                        color: $blue-hover;
+                        transition: .5s;
+                        svg{
+                            fill: $blue-hover;
+                            transition: .5s;
+                        }
+                    }
+                }
+                margin-left: 20px;
+                svg {
+                    width: 30px;
+
+                }
+                p {
+                    font-size: 20px;
+                    margin-top: 6px;
+                }
+            }
+        & img {
+            width: 177px;
+            height: 112px;
+        }
+        }
+        &-right {
+            .popup {
+                position: relative;
+                display: none; /* Скрываем попап по умолчанию */
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+                transition: .5s;
+                &-content {
+                    background-color: #fff;
+                    margin: 15% auto;
+                    // padding: 20px;
+                    border: 1px solid #888;
+                    width: 400px; /* Ширина попапа */
+                    border-radius: 5px; /* Закругленные углы */
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                .close {
+                    color: #aaa;
+                    float: right;
+                    font-size: 40px;
+                    font-weight: bold;
+                    transition: 0.5s;
+                    text-align: end;
+                    margin-right: 7px;
+                    &:hover,&:focus {
+                        color: black;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                }
+
+                label {
+                    display: block;
+                    margin: 10px 0 5px;
+                    font-size: 18px;
+                    text-align: left;
+                }
+                
+                input {
+                    width: 100%;
+                    padding: 8px;
+                    margin-bottom: 10px;
+                    border: 2px solid #ccc;
+                    border-radius: 4px;
+                    font-size: 15px;
+                    &:focus {
+                        border-color: $green-color;
+                    }
+                }
+                form {
+                    padding: 10px 20px 20px 20px;
+                    text-align: center;
+                }
+                button {
+                    padding: 10px 15px;
+                    background-color: $blue-color;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    transition: .5s;
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-top: 15px;
+                }
+                
+                button:hover {
+                    background-color: $blue-hover;
+                }
+                h2 {
+                    font-size: 35px;
+                    text-align: center;
+                    margin-top: 0px;
+                }
+            }
+            button {
+                padding: 15px 20px;
+                background-color: $red-color;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: 0.5s;
+                font-size: 20px;
+                font-weight: bold;
+                margin-top: 15px;
+                &:hover {
+                    background-color: $red-hover;
+                }
+            }
+
+        }
+    }
+}
+.main {
+    margin-top: 10px;
+    &__inner {
+    }
+}
+
+.navbar {
+
+    &__line {
+        width: 100%;
+        background-color: $green-color;
+        display: flex;
+        justify-content: center;
+        height: 55px;
+        border-radius: 10px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    &__item {
+        font-size: 20px;
+        width: 150px;
+        text-align: center;
+    }
+
+    &__item-link {
+        width: 150px;
+        padding: 0 5px;
+        text-align: center;
+        &:hover{
+            font-weight: bold;
+        }
+    }
+}
