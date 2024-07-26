@@ -61,12 +61,6 @@
             a {
                 width: 12%;
             }
-            &-telegram {
-
-            }
-            &-whatsup{
-                
-            }
             &-phones {
                 display: flex;
                 flex-direction: column;
@@ -205,8 +199,6 @@
 }
 .main {
     margin-top: 10px;
-    &__inner {
-    }
     .navbar {
 
         &__line {
@@ -406,13 +398,74 @@
             &__inner-button-line {
                 margin-top: 30px;
                 display: flex;
-                justify-content: space-evenly;
+                gap: 100px;
+                justify-content: center;
                 align-items: center;
+                padding-left: 60px;
             }
     }
-    .slider-link {
-    }
     
+    .process {
+        margin-top: 80px;
+
+        &__inner {
+            h2 {
+                font-size: 30px;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            p{
+                font-size: 18px;
+            }
+            &-cards {
+                margin-top: 50px;
+                .cards-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(2, 1fr);
+                    gap: 20px;
+                }
+                .process-card3 {
+                    grid-row-start: 1;
+                    grid-column-start: 2;
+                    grid-row-end: 3;
+                    span {
+                        margin-left: 30px;
+                        font-weight: bold;
+                        &::before{
+                            content: url('../images/arrow.svg');
+                            position: relative;
+                            top: 2px;
+                            right: 5px;
+                        }
+                    }
+                }
+                .process-card4 {
+                    margin-top: 20px;
+                    display: flex;
+                    align-items: center;
+                    text-align: left;
+                    gap: 20px;
+                    h4 {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        &__card {
+            h4{
+                color: $green-color;
+                font-size: 20px;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+            line-height: 1.2;
+            display: flex;
+            align-items: center;
+            &-text {
+                margin-left: 20px;
+            }
+        }
 }
 
 //variables classes
@@ -448,4 +501,5 @@
 }
 .ml {
     margin-left: 25px;
+}
 }
