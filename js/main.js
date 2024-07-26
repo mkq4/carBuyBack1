@@ -3,8 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const openPopupButton = document.getElementById('openPopup');
     const popup = document.getElementById('popup');
     const closePopupButton = document.getElementById('closePopup');
-
+    const sliderButton = document.getElementById("slider-button")
     // Открытие попапа
+    sliderButton.addEventListener('click', function() {
+        popup.style.display = 'block';
+    });
     openPopupButton.addEventListener('click', function() {
         popup.style.display = 'block';
     });
