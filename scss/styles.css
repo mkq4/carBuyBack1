@@ -365,6 +365,7 @@
 }
 .main .process {
   margin-top: 80px;
+  margin-bottom: 100px;
 }
 .main .process__inner h2 {
   font-size: 30px;
@@ -422,6 +423,85 @@
 .main .process__card-text {
   margin-left: 20px;
 }
+.main .form-car h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+.main .form-car__inner {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.main .form-car__inner .form-car__form {
+  border-radius: 10px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 50%;
+  padding: 0 20px;
+  border: 2px solid rgb(20, 111, 201);
+}
+.main .form-car__inner .form-car__form h2 {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.main .form-car__inner .form-car__form span {
+  text-align: center;
+  font-size: 16px;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.main .form-car__inner .form-car__form .form-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+.main .form-car__inner .form-car__form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 17px;
+}
+.main .form-car__inner .form-car__form input:focus {
+  border-color: rgb(20, 111, 201);
+  outline: none;
+}
+.main .form-car__inner .form-car__form input::-moz-placeholder {
+  color: #999;
+}
+.main .form-car__inner .form-car__form input::placeholder {
+  color: #999;
+}
+.main .form-car__inner .form-car__form input + input {
+  margin-top: 10px;
+}
+.main .form-car__inner .form-car__form .submit-btn {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: rgb(20, 111, 201);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+  font-size: 20px;
+}
+.main .form-car__inner .form-car__form .submit-btn:hover {
+  background-color: rgb(13, 73, 130);
+}
+.main .form-car__inner .form-car__map {
+  width: 100%;
+}
 .main .call {
   color: #fff;
   padding: 15px 10px;
@@ -453,4 +533,8 @@
 }
 .main .ml {
   margin-left: 25px;
+}
+
+.footer {
+  margin-top: auto;
 }/*# sourceMappingURL=styles.css.map */
