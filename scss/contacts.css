@@ -1,5 +1,12 @@
 .main {
     margin-top: 10px;
+    margin-bottom: 60px;
+    h2 {
+      text-align: center;
+      font-size: 30px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
   }
   .main .navbar__line {
     width: 100%;
@@ -35,23 +42,64 @@
     font-weight: bold;
   }
 .main__contacts {
-
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 .contacts-block {
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 
+  }
+  .contacts-tg-wup {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    a{
+      width: 100%;
+    }
+  }
 }
-.contacts-tg-wup {
-    a {}
-}
-.header__inner-tel-whatsup {
-}
-.header__inner-tel-telegram {
+
+.contacts-vk a:hover{
+  background-color: rgb(13, 73, 130);
 }
 .contacts-vk {
+  margin: 25px 0;
+  a {
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    background-color: #2787F5;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  svg {
+    width: 30px;
+    margin-right: 10px;
+  }
 }
 .contacts-tel {
+  font-weight: bold;
+  font-size: 20px;
+}
+.contacts-tel + .contacts-tel {
+  margin-top: 10px;
 }
 .map {
+  width: 70%;
+  h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 25px;
+  }
 }
 .map-address {
 }
