@@ -172,7 +172,7 @@
                     text-align: center;
                     margin-top: 0px;
                 }
-                .popup-comment {
+                .form-car__form-result {
                     margin-top: 15px;
                     font-size: 15px;
                 }
@@ -190,8 +190,8 @@
                 margin-top: 15px;
                 &:hover {
                     background-color: $red-hover;
-
                 }
+
             }
 
         }
@@ -224,6 +224,7 @@
             font-size: 20px;
             width: 150px;
             text-align: center;
+
         }
     
         &__item-link {
@@ -231,6 +232,7 @@
             padding: 0 5px;
             text-align: center;
             transition: .2s;
+            display: block;
             &:hover{
                 font-size: 21px;
                 font-weight: bold;
@@ -407,7 +409,7 @@
     
     .process {
         
-        margin-top: 80px;
+        padding-top: 80px;
         margin-bottom: 100px;
         &__inner {
             h2 {
@@ -639,7 +641,7 @@
 		}
 
 		&__inner-vk {
-            transition: .2s;
+            // transition: .2s;
             :hover {
                 background-color: $blue-hover;
             }
@@ -659,21 +661,6 @@
                 font-weight: bold;
 
             }
-
-
 		}
-}
-.container {
-}
-.header {
-
-		&__inner-tel-whatsup {
-		}
-
-		&__inner-tel-telegram {
-		}
-}
-.a {
-}
-
+    }
 }
