@@ -59,6 +59,7 @@
     display: flex;
     justify-content: center;
     width: 90%;
+    gap: 10px;
     a{
       width: 100%;
     }
@@ -102,4 +103,18 @@
   }
 }
 .map-address {
+}
+@media (max-width: 768px) {
+  .contacts-block {
+    display: none;
+  }
+  .map {
+    width: 100%;
+    h3 {
+      font-size: 20px;
+    }
+  }
+  .footer {
+    margin-top: 20px;
+  }
 }

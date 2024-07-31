@@ -1,10 +1,26 @@
+body {
+  padding-top: 112px;
+}
+
 .container {
     max-width: 1200px;
     padding: 0 25px;
     margin: 0 auto;
     background-color: #fff;
   }
-  
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white; /* или любой другой цвет */
+    transition: top 0.3s;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(139, 198, 70);
+  }
+  .navbar {
+    margin-top: 25px;
+  }
   .header h1 {
     font-size: 50px;
   }
@@ -14,6 +30,12 @@
     justify-content: space-between;
     align-items: end;
   }
+    
+  .header.hidden {
+    top: -100px; /* или высота вашего header */
+  }
+
+
   .header__inner-left {
     display: flex;
     align-items: end;
@@ -249,11 +271,12 @@
     .header__inner-left-text p {
       font-size: 18px !important;
     }
-    .svg-link {
-      display: none;
-    }
     .header__inner-tel {
+      flex-direction: column;
        a {font-size: 17px !important;}
+    }
+    .header__inner-tel-whatsup, .header__inner-tel-telegram{
+      display: none;
     }
   }
   @media (max-width: 768px) {
@@ -280,11 +303,20 @@
       display: flex;
       width: 30px;
     }
+    main nav {
+      display: none;
+    }
+    .slider {
+      margin-top: 30px !important;
+    }
   }
   @media (max-width: 550px) {
     .header__inner-left img {
       width: 80px !important;
       height: auto !important;
+    }
+    body {
+      padding-top: 70px;
     }
     .header h1 {
       font-size: 17px !important;

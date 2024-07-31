@@ -9,13 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const burgerIcon = document.getElementById('burgerIcon');
     const burgerMenu = document.getElementById('burgerMenu');
     const closeBurger = document.getElementById('closeBurger');
-    
+    const processLink = document.getElementById('process__link');
+
     burgerIcon.addEventListener('click', () => {
         burgerMenu.style.display = 'flex';
+        document.body.style.overflow = 'hidden'
     });
-    
+    processLink.addEventListener('click', () => {
+        burgerMenu.style.display = 'none';
+        document.body.style.overflow = 'scroll'
+    })
     closeBurger.addEventListener('click', () => {
         burgerMenu.style.display = 'none';
+        document.body.style.overflow = 'scroll'
     });
 
     // Открытие попапа
