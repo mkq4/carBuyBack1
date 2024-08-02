@@ -93,7 +93,7 @@ body {
   .header__inner-tel-phones a + a {
     margin-top: 5px;
   }
-  .header__inner-right .popup {
+  .popup {
     position: relative;
     display: none; /* Скрываем попап по умолчанию */
     position: fixed;
@@ -106,7 +106,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
     transition: 0.5s;
   }
-  .header__inner-right .popup-content {
+  .popup-content {
     background-color: #fff;
     position: absolute;
     top: 50%;
@@ -117,13 +117,14 @@ body {
     border-radius: 5px; /* Закругленные углы */
     display: flex;
     flex-direction: column;
+    
   }
-  .header__inner-right .popup .close-div {
+  .popup .close-div {
     display: flex;
     align-items: center;
     justify-content: flex-end;
   }
-  .header__inner-right .popup .close {
+  .popup .close {
     color: #aaa;
     float: right;
     font-size: 40px;
@@ -132,18 +133,18 @@ body {
     text-align: end;
     margin-right: 7px;
   }
-  .header__inner-right .popup .close:hover, .header__inner-right .popup .close:focus {
+  .popup .close:hover, .header__inner-right .popup .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
   }
-  .header__inner-right .popup label {
+  .popup label {
     display: block;
     margin: 10px 0 5px;
     font-size: 18px;
     text-align: left;
   }
-  .header__inner-right .popup input {
+  .popup input {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -151,16 +152,16 @@ body {
     border-radius: 4px;
     font-size: 15px;
   }
-  .header__inner-right .popup input:focus {
+  .popup input:focus {
     border-color: rgb(139, 198, 70);
   }
-  .header__inner-right .popup form {
+  .popup form {
     padding: 10px 20px 20px 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
   }
-  .header__inner-right .popup button {
+  .popup button {
     padding: 10px 15px;
     background-color: rgb(20, 111, 201);
     color: white;
@@ -172,15 +173,15 @@ body {
     font-weight: bold;
     margin-top: 15px;
   }
-  .header__inner-right .popup button:hover {
+  .popup button:hover {
     background-color: rgb(13, 73, 130);
   }
-  .header__inner-right .popup h2 {
+  .popup h2 {
     font-size: 35px;
     text-align: center;
     margin-top: 0px;
   }
-  .header__inner-right .popup .form-car__form-result {
+  .popup .form-car__form-result {
     margin-top: 15px;
     font-size: 15px;
   }
@@ -315,6 +316,7 @@ body {
       width: 80px !important;
       height: auto !important;
     }
+    
     body {
       padding-top: 70px;
     }
@@ -329,5 +331,8 @@ body {
     }
     .header__inner-left {
       align-items: end !important;
+    }
+    .popup-content {
+      width: 300px;
     }
   }

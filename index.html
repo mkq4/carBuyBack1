@@ -31,6 +31,24 @@
   </head>
   <body>
     <div class="wrapper">
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <div class="close-div">
+            <span class="close" id="closePopup">&times;</span>
+          </div>
+          <h2>Автовыкуп</h2>
+          <form id="contactForm">
+            <label for="name">Имя:</label>
+            <input maxlength="20" type="text" id="name" name="name" required />
+
+            <label for="phone">Телефон:</label>
+            <input placeholder="+7 (___) ___ - __ - __" type="tel" id="phone" name="phone" required maxlength="20" />
+
+            <button type="submit">Отправить</button>
+            <span class="form-car__form-result">перезвоним вам в течении 1 минуты</span>
+          </form>
+        </div>
+      </div>
       <header class="header">
         <div class="container">
           <div class="header__inner">
@@ -92,24 +110,7 @@
             </div>
             <div class="header__inner-right">
               <button id="openPopup" class="header__inner-button">Обратный звонок</button>
-              <div id="popup" class="popup">
-                <div class="popup-content">
-                  <div class="close-div">
-                    <span class="close" id="closePopup">&times;</span>
-                  </div>
-                  <h2>Автовыкуп</h2>
-                  <form id="contactForm">
-                    <label for="name">Имя:</label>
-                    <input maxlength="20" type="text" id="name" name="name" required />
-      
-                    <label for="phone">Телефон:</label>
-                    <input placeholder="+7 (___) ___ - __ - __" type="tel" id="phone" name="phone" required maxlength="20" />
-      
-                    <button type="submit">Отправить</button>
-                    <span class="form-car__form-result">перезвоним вам в течении 1 минуты</span>
-                  </form>
-                </div>
-              </div>
+
             </div>
             <div class="burger-menu" id="burgerMenu">
               <div class="burger-menu__content">
