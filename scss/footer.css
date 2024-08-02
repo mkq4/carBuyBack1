@@ -63,7 +63,21 @@
   margin-right: 10px;
 
 }/*# sourceMappingURL=styles.css.map */
-
+.sell-car-link {
+  display: none; /* Скрываем по умолчанию */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(20, 111, 201, 1);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 25px;
+  text-decoration: none;
+  z-index: 1000;
+  font-weight: bold;
+}
 @media (max-width: 768px) {
   .footer .footer__inner {
     flex-direction: column;
@@ -99,6 +113,9 @@
     font-size: 15px;
     padding: 8px 10px;
   }
+  .sell-car-link {
+    display: block;
+}
 }
 
 @media (max-width: 480px) {
