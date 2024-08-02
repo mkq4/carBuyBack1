@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const openPopupButton = document.getElementById('openPopup');
     const popup = document.getElementById('popup');
     const closePopupButton = document.getElementById('closePopup');
-    const sliderButton = document.getElementById("slider-button")
+    const sliderButton = document.querySelectorAll("#slider-button")
     const burgerIcon = document.getElementById('burgerIcon');
     const burgerMenu = document.getElementById('burgerMenu');
     const closeBurger = document.getElementById('closeBurger');
@@ -23,11 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
         burgerMenu.style.display = 'none';
         document.body.style.overflow = 'scroll'
     });
-
+    sliderButton.forEach(el => {
+        el.addEventListener('click', function() {
+            popup.style.display = 'block';
+        });
+    })
     // Открытие попапа
-    sliderButton.addEventListener('click', function() {
-        popup.style.display = 'block';
-    });
+    // sliderButton.addEventListener('click', function() {
+    //     popup.style.display = 'block';
+    // });
     openPopupButton.addEventListener('click', function() {
         popup.style.display = 'block';
     });

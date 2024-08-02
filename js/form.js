@@ -32,7 +32,7 @@ async function sendContactForm(event) {
     const name = document.getElementById('name').value;
 
 
-    const message = `Заявка на обратный звонок\nТелефон: ${phone}\nИмя: ${name}`;
+    const message = `Сайт - автовыкупкиров.рф\n\nЗаявка на обратный звонок\n\nТелефон: ${phone}\nИмя: ${name}`;
 
     await sendTelegramMessage(message);
     document.getElementById('contactForm').reset();

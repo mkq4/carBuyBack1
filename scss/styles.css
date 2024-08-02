@@ -143,7 +143,7 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  gap: 100px;
+  gap: 70px;
 }
 .main .pluses__inner-card {
   display: flex;
@@ -194,7 +194,7 @@
 }
 .process {
   padding-top: 80px;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .process__inner h2 {
@@ -263,6 +263,23 @@
 
 .process__card-text {
   margin-left: 20px;
+}
+
+.whishes {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+  h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(240, 0, 0);
+  }
+  img {
+    width: 600px;
+  }
 }
 
 
@@ -472,6 +489,14 @@
   .process__inner-cards .process-card4 h4 {
     text-align: center;
   }
+
+
+  .whishes {
+    img {
+      width: 100%;
+    }
+  }
+
   .form-car h2 {
     font-size: 30px;
   }
@@ -516,7 +541,9 @@
     margin-left: 0;
     width: 100%;
   }
-
+  .sell-car-link{
+    bottom: -15px
+  }
 }
 
 @media (max-width: 550px) {
