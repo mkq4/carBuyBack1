@@ -100,10 +100,12 @@
   font-weight: bold;
   margin-bottom: 15px;
 }
-.main .slider .slide img {
-  flex: 1;
+.main .slider .slide .slide-img {
+  display: flex;
   max-width: 100%;
   height: auto;
+  align-items: center;
+  justify-content: center;
 }
 .main .slider-nav {
   position: absolute;
@@ -435,9 +437,9 @@
   main nav {
     display: none;
   }
-  .main .slider .slide img {
-    max-height: 350px;
-    width: 60%;
+  .main .slider .slide .slide-img img  {
+    max-height: 250px !important;
+    max-width: 300px;
   }
   
   .main .pluses__inner-button-line  {
@@ -524,6 +526,7 @@
   .slide {
     padding: 0;
     flex-direction: column-reverse;
+
     h3 {
       margin-top: 20px;
       text-align: center;
@@ -539,6 +542,9 @@
   }
   .main .slider .slide img {
     margin-left: 0;
+    width: 90%;
+  }
+  .slide3-img {
     width: 100%;
   }
   .sell-car-link{

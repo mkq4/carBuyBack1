@@ -78,6 +78,20 @@
   z-index: 1000;
   font-weight: bold;
 }
+.contacts-message {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  position: fixed;
+  width: 60px;
+  bottom: 15px;
+  right: 15px;
+  background-color: rgba(20, 111, 201, 1);
+  transition: .2s;
+}
+.contacts-message:hover {
+  background-color: rgba(13, 73, 130);
+}
 @media (max-width: 768px) {
   .footer .footer__inner {
     flex-direction: column;
@@ -115,6 +129,9 @@
   }
   .sell-car-link {
     display: block;
+}
+.contacts-message {
+  bottom: 75px;
 }
 }
 
