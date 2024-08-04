@@ -1,39 +1,7 @@
 .main {
     margin-top: 10px;
   }
-  .main .navbar__line {
-    width: 100%;
-    background-color: rgb(139, 198, 70);
-    display: flex;
-    justify-content: center;
-    height: 55px;
-    border-radius: 10px;
-  }
-  .main .navbar__line a {
-    color: #fff;
-  }
-  .main .navbar__list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-  .main .navbar__item {
-    font-size: 20px;
-    width: 150px;
-    text-align: center;
-  }
-  .main .navbar__item-link {
-    width: 150px;
-    padding: 0 5px;
-    text-align: center;
-    transition: 0.2s;
-    display: block;
-  }
-  .main .navbar__item-link:hover {
-    font-size: 21px;
-    font-weight: bold;
-  }
+
   .about {
     display: flex;
     flex-direction: column;
