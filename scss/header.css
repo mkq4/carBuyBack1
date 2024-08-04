@@ -18,7 +18,7 @@
     margin-top: 25px;
   }
   .header h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
   .header__inner {
     margin-top: 10px;
@@ -404,14 +404,6 @@
       width: 50px;
     }
   }
-  .sticky-header__burger {
-  }
-  .navbar__list {
-  }
-  .navbar__item {
-  }
-  .navbar__item-link {
-  }
   .burger-icon {
     display: flex;
     width: 30px;
@@ -483,12 +475,22 @@
         width: 80%;
       }
     }
+    .header__inner-left-img {
+      max-width: 150px;
+      max-height: 100px;
+    }
+    .header__inner-left {
+      img {
+          width: 100%;
+          height: 100%;
+      }
+  }
   }
   @media (max-width: 550px) {
-    /* .header__inner-left img {
-      width: 80px !important;
-      height: auto !important;
-    } */
+    .header__inner-left-text a {
+      margin-top: 0px;
+  }
+
     
     .header__inner-tel-phones a {
       font-size: 20px;
@@ -497,23 +499,19 @@
       width: 15%;
     }
     .header__inner-left {
-      h1 {
-        text-align: center;
-        margin-top: 10px;
-      }
       img {
-        margin-right: 45px;
+        width: 100%;
       }
-      flex-direction: column;
     }
     .header__inner-left-text {
       margin-left: 0;
       p {
-        font-size: 18px !important;
+        font-size: 15px !important;
       }
     }
     .header h1 {
-      font-size: 25px !important;
+      font-size: 23px !important;
+      text-align: center;
     }
     .header__inner-left-text h1 {
       margin-bottom: 10px;
