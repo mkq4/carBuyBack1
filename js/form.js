@@ -1,3 +1,6 @@
+// require("dotenv").config();
+// import {TOKEN} from './env.js'
+
 document.addEventListener('DOMContentLoaded', () => {
     try {
         document.getElementById('carForm').addEventListener('submit', sendCarForm);
@@ -8,9 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('contactForm').addEventListener('submit', sendContactForm);
     const result = document.querySelectorAll('.form-car__form-result')
     
-    const token = '5862490675:AAG7nuV9jxYlbWnk8OuxqabSvSAFdtwTeSY';
-    const chatId = '-4218623363';
-    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+
     
     async function sendCarForm(event) {
         event.preventDefault();
@@ -20,12 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const car = document.getElementById('car_form').value;
         const mileage = document.getElementById('mileage_form').value;
     
-        if (!phone || !name || !car || !mileage) {
+        if (!phone || !car) {
             alert('Пожалуйста, заполните все поля формы.');
             return; 
         }
     
-        const message = `Сайт - автовыкупкиров.рф\n\nЗаявка на выкуп авто\n\nТелефон: ${phone}\nИмя: ${name}\nМашина: ${car}\nПробег: ${mileage}`;
+        const message = `Сайт - автовыкупкиров.рф\n\nЗаявка на выкуп авто\n\nТелефон: ${phone}\nИмя: ${name}\nМашина: ${car}\nЦена: ${mileage}`;
     
         await sendTelegramMessage(message);
         document.getElementById('carForm').reset();
@@ -46,15 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     async function sendTelegramMessage(message) {
         try {
-            const response = await fetch(url, {
+            const response = await fetch('http://localhost:3000/api/sendForm', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({
-                    chat_id: chatId,
-                    text: message
-                })
+                body: JSON.stringify({ message })
             });
     
             if (response.ok) {
