@@ -1,7 +1,9 @@
 // require("dotenv").config();
 // import {TOKEN} from './env.js'
+import {data} from "../images/process5.js";
 
 document.addEventListener('DOMContentLoaded', () => {
+    console.log(data);
     try {
         document.getElementById('carForm').addEventListener('submit', sendCarForm);
     }
@@ -45,26 +47,29 @@ document.addEventListener('DOMContentLoaded', () => {
         await sendTelegramMessage(message);
         document.getElementById('contactForm').reset();
     }
-    
+    const url = `https://api.telegram.org/bot${data.token}/sendMessage`;
     async function sendTelegramMessage(message) {
         try {
-            const response = await fetch('http://localhost:3000/api/sendForm', {
+            const response = await fetch(url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ message })
+                body: JSON.stringify({
+                    chat_id: data.chatId,
+                    text: message
+                })
             });
     
             if (response.ok) {
-                result.forEach(el => el.innerHTML = "заявка отправлена")
+                res.status(200).json({ success: 'Message sent successfully' });
             } else {
-                alert('Ошибка при отправке заявки');
                 console.error('Response status:', response.status);
+                res.status(response.status).json({ error: 'Error sending message' });
             }
         } catch (error) {
             console.error('Fetch error:', error);
-            alert('Ошибка при отправке заявки');
+            res.status(500).json({ error: 'Internal server error' });
         }
     }
     
