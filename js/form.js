@@ -1,5 +1,3 @@
-// require("dotenv").config();
-// import {TOKEN} from './env.js'
 import {data} from "../images/process5.js";
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -13,8 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('contactForm').addEventListener('submit', sendContactForm);
     const result = document.querySelectorAll('.form-car__form-result')
     
-
-
     
     async function sendCarForm(event) {
         event.preventDefault();
@@ -61,16 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
             });
     
-            if (response.ok) {
-                res.status(200).json({ success: 'Message sent successfully' });
-            } else {
-                console.error('Response status:', response.status);
-                res.status(response.status).json({ error: 'Error sending message' });
-            }
+            result.forEach(el => el.innerHTML = 'Заявка отправлена')
+
         } catch (error) {
             console.error('Fetch error:', error);
-            res.status(500).json({ error: 'Internal server error' });
         }
     }
-    
 })
