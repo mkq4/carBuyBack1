@@ -2,6 +2,9 @@
   background-color: rgb(139, 198, 70);
   padding-bottom: 20px;
   padding-top: 20px;
+  .footer__tel {
+    margin-bottom: 10px;
+  }
 }
 .footer .footer__container {
   background-color: rgb(139, 198, 70);
@@ -37,7 +40,7 @@
   align-items: center;
 }
 .footer .footer__inner-socials a {
-  font-size: 18px;
+  font-size: 23px;
   font-weight: bold;
 }
 .footer .footer__inner-socials h3 {
